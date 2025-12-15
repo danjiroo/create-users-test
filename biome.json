@@ -11,24 +11,91 @@
   },
   "formatter": {
     "enabled": true,
+    "formatWithErrors": false,
     "indentStyle": "space",
-    "indentWidth": 2
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 80,
+    "attributePosition": "auto",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "expand": "auto",
+    "useEditorconfig": true
   },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
-    },
-    "domains": {
-      "next": "recommended",
-      "react": "recommended"
-    }
-  },
-  "assist": {
-    "actions": {
-      "source": {
-        "organizeImports": "on"
+      "recommended": true,
+      "a11y": {
+        "noStaticElementInteractions": "off",
+        "useKeyWithClickEvents": "off"
+      },
+      "complexity": {
+        "useArrowFunction": "error"
+      },
+      "correctness": {
+        "noUnusedVariables": "error",
+        "noUnusedImports": "error",
+        "noUnusedFunctionParameters": "error",
+        "noUndeclaredDependencies": "error",
+        "useHookAtTopLevel": "error",
+        "useUniqueElementIds": "off"
+      },
+      "nursery": {
+        "noImportCycles": "error",
+        "useMaxParams": {
+          "level": "error",
+          "options": {
+            "max": 3
+          }
+        },
+        "useSortedClasses": "error"
+      },
+      "style": {
+        "useNamingConvention": {
+          "level": "error",
+          "options": {
+            "strictCase": true,
+            "conventions": [
+              {
+                "selector": {
+                  "kind": "objectLiteralProperty"
+                },
+                "formats": ["camelCase", "PascalCase"],
+                "match": "[A-Za-z|_].*"
+              }
+            ]
+          }
+        },
+        "useFilenamingConvention": {
+          "level": "error",
+          "options": {
+            "strictCase": true,
+            "requireAscii": true,
+            "match": "%?(.+?)[.](.+)",
+            "filenameCases": ["kebab-case"]
+          }
+        }
+      },
+      "suspicious": {
+        "noEmptyBlockStatements": "off",
+        "noExplicitAny": "error"
       }
     }
+  },
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "single",
+      "quoteProperties": "asNeeded",
+      "trailingCommas": "all",
+      "semicolons": "always",
+      "arrowParentheses": "always",
+      "bracketSameLine": false,
+      "quoteStyle": "single",
+      "attributePosition": "auto",
+      "bracketSpacing": true
+    },
+    "globals": []
   }
 }
