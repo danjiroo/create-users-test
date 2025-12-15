@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { css } from '@/styled-systemcss';
+import { css } from '@/styled-system/css';
 import { AddUserModal } from './components/add-user-modal';
 import { useUsers } from './hooks/use-users';
 

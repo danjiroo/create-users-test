@@ -1,5 +1,5 @@
 import type { ComponentProps } from 'react';
-import { css } from '@/styled-systemcss';
+import { css } from '@/styled-system/css';
 
 type CommonProps = {
   label?: string;

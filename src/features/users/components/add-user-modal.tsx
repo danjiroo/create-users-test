@@ -3,7 +3,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { Input } from '@/components/input';
 import { Modal, type ModalProps } from '@/components/modal';
-import { css } from '@/styled-systemcss';
+import { css } from '@/styled-system/css';
 import { type CreateUserType, createUserSchema } from '../schema';
 import type { User } from '../types';
 
