@@ -1,5 +1,5 @@
 import { defineConfig } from '@pandacss/dev';
-import { globalCss,  } from './panda/';
+import { globalCss } from './panda/';
 
 export default defineConfig({
   preflight: true,

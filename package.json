@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
     "lint": "biome check",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "panda": "panda codegen",
+    "build": "pnpm panda && next build",
+    "postinstall": "pnpm panda"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
