@@ -17,7 +17,7 @@ export const Input: React.FC<ComponentProps<'input'> & CommonProps> = ({
       className={css({
         display: 'flex',
         flexDirection: 'column',
-        gap: 4,
+        gap: 2,
       })}
     >
       {!!label && (
@@ -32,15 +32,27 @@ export const Input: React.FC<ComponentProps<'input'> & CommonProps> = ({
 
       <input
         {...rest}
-        className={css({ border: '1px solid grey', px: 4, py: 2 })}
+        className={css({
+          borderWidth: '0.0625rem',
+          borderStyle: 'solid',
+          borderColor: error ? 'red' : 'grey',
+          borderRadius: 'sm',
+          px: 4,
+          py: 2,
+          _focus: {
+            borderColor: 'grey',
+            outline: 'none',
+          },
+          _active: {
+            borderColor: 'grey',
+          },
+        })}
       />
 
       {!!error && (
         <p
           className={css({
             color: 'red',
-            px: 4,
-            py: 2,
           })}
         >
           {error}

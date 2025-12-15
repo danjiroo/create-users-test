@@ -22,7 +22,7 @@ export const Modal: React.FC<ModalProps> = ({
         css({
           position: 'fixed',
           inset: 0,
-          bg: '#808080b0.50',
+          bg: '#808080b0',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -35,12 +35,15 @@ export const Modal: React.FC<ModalProps> = ({
         className={css({
           bg: 'white',
           borderRadius: 'lg',
-          minW: 'sm',
-          maxW: '800px',
+          w: 'full',
+          maxW: '95%',
           maxH: '80%',
           overflowY: 'auto',
           p: 6,
           shadow: 'lg',
+          md: {
+            w: '800px',
+          },
         })}
         onClick={(e) => e.stopPropagation()}
       >

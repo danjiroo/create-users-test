@@ -57,8 +57,12 @@ export const AddUserModal: React.FC<AddUserModalProps> = ({
           <fieldset
             className={css({
               display: 'grid',
-              gridTemplateColumns: '1fr 1fr 1fr',
+              gridTemplateColumns: '1fr',
+              w: 'full',
               gap: 4,
+              md: {
+                gridTemplateColumns: '1fr 1fr',
+              },
             })}
           >
             <Input
@@ -88,7 +92,17 @@ export const AddUserModal: React.FC<AddUserModalProps> = ({
             />
           </fieldset>
 
-          <fieldset className={css({ mt: 4 })}>
+          <fieldset
+            className={css({
+              mt: 4,
+              display: 'grid',
+              gridTemplateColumns: '1fr',
+              gap: 4,
+              md: {
+                gridTemplateColumns: '1fr 1fr',
+              },
+            })}
+          >
             <legend className={css({ fontWeight: 'bold', mb: 2 })}>
               Address
             </legend>
@@ -124,7 +138,17 @@ export const AddUserModal: React.FC<AddUserModalProps> = ({
             />
           </fieldset>
 
-          <fieldset className={css({ my: 4 })}>
+          <fieldset
+            className={css({
+              my: 4,
+              display: 'grid',
+              gridTemplateColumns: '1fr',
+              gap: 4,
+              md: {
+                gridTemplateColumns: '1fr 1fr',
+              },
+            })}
+          >
             <legend className={css({ fontWeight: 'bold', mb: 2 })}>
               Company
             </legend>
