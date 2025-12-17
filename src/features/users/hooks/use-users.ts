@@ -8,6 +8,7 @@ interface UseFetchUsersResult {
   isLoading: boolean;
   error: Error | null;
   addUser: (data: User) => void;
+  deleteUser: (id: number) => void;
 }
 
 // usually i do separate fetch and mutations
@@ -39,5 +40,11 @@ export const useUsers = (): UseFetchUsersResult => {
     setData((prev) => [...prev, user]);
   };
 
-  return { data, isLoading, error, addUser };
+  const deleteUser = (id: number) => {
+    const filteredData = data.filter((user) => user.id !== id);
+
+    setData(filteredData);
+  };
+
+  return { data, isLoading, error, addUser, deleteUser };
 };
